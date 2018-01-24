@@ -11,6 +11,9 @@ void SimpleThread(int which){
     int num, val;
 
     for(num = 0; num < 20; num++){
+        #ifdef PTHREAD_SYNC
+        
+        #endif
         if(random() > RAND_MAX / 2)
         usleep(500);
 
