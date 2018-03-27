@@ -1,5 +1,6 @@
-simple_unsynced: simple_unsynced.o
-	gcc -pthread simple_unsynced.o -o simple_unsynced
+-CPPFLAGS=-DPTHREAD_SYNC
 
+multi_thread: multi_thread.o
+	gcc  $(CPPFLAGS) -pthread multi_thread.o -o multi_thread
 clean: 
-	rm -f simple_unsynced simple_unsynced.o core *~
+	rm -f multi_thread multi_thread.o core *~
